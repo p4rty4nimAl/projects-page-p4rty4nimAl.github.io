@@ -18,21 +18,22 @@ function App() {
 }
 
 class Showcases extends React.Component {
-  showcaseWidgets = [];
   constructor(props) {
-    super(props)
+    super(props);
+    let showcaseWidgets = [];
     for (let showcase of showcases) {
-      this.showcaseWidgets.push(
+      showcaseWidgets.push(
         <Showcase showcase={showcase} key={showcase.link}/>
       )
     }
+    this.state = {showcaseWidgets: showcaseWidgets}
   }
   render() {
     return (
       <div className="showcase-container">
         <SearchBar parent={this} />
         <div>
-          {this.showcaseWidgets}
+          {this.state.showcaseWidgets}
         </div>
       </div>
     )
@@ -41,15 +42,11 @@ class Showcases extends React.Component {
     query = query.toLowerCase();
     let searchedShowcases = [];
     for (let showcase of showcases) {
-      if (showcase.link.toLowerCase().includes(query) || 
-        showcase.name.toLowerCase().includes(query) || 
-        showcase.keywords.includes(query)
-      ) {
+      if (showcase.link.toLowerCase().includes(query) || showcase.name.toLowerCase().includes(query) || showcase.keywords.includes(query)) {
         searchedShowcases.push(<Showcase showcase={showcase} key={showcase.link}/>);
       }
     }
-    this.showcaseWidgets = searchedShowcases;
-    this.forceUpdate();
+    this.setState({showcaseWidgets: searchedShowcases});
   }
 }
 class Showcase extends React.Component {
@@ -66,10 +63,11 @@ class Showcase extends React.Component {
   }
 }
 class SearchBar extends React.Component {
+  textInput = React.createRef()
   render() {
     return (
       <span className="searchbar">
-        <input className="searchbar-input" placeholder="Search..." onChange={this.handleChange.bind(this)} autoFocus />
+        <input ref={this.textInput} className="searchbar-input" placeholder="Search..." onChange={this.handleChange.bind(this)} autoFocus />
         <button className="searchbar-button">
           <img className="searchbar-icon" src="/projects/static/search.png" alt="" />
         </button>
@@ -77,7 +75,7 @@ class SearchBar extends React.Component {
     )
   }
   handleChange() {
-    this.props.parent.search(document.getElementsByClassName("searchbar-input")[0].value);
+    this.props.parent.search(this.textInput.current.value);
   }
 }
 
