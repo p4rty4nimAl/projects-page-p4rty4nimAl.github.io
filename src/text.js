@@ -13,19 +13,19 @@ export const showcases = [
         <a href="/projects/keysmashCipher">Keysmash Cipher</a>,
         `, improving upon it by simply applying it twice.`
       ],
-      "keywords": "keysmash cipher"
+      "keywords": "keysmash cipher bipher"
     },
     {
       "link": "/projects/caesarVariation",
       "name": "Caesar Variation",
       "desc": "This is the famous Caesar Cipher, but the change by 3 is replaced with an alternative.",
-      "keywords": "cipher"
+      "keywords": "cipher caesarvariation caesar variation"
     },
     {
       "link": "/projects/continuousRegisterCipher",
       "name": "Continuous Register Cipher",
       "desc": "This cipher works by incrementing a counter per character it sees, then outputting the current value.",
-      "keywords": "crc"
+      "keywords": "crc continuousregistercipher continuous register cipher"
     },
     {
       "link": "/projects/hashKeyCipher",
@@ -35,7 +35,7 @@ export const showcases = [
         <a href="/projects/keyedCRC">Keyed CRC</a>, 
         `, including a hash over the key-based security it offers.`
       ],
-      "keywords": "continuous register cipher"
+      "keywords": "continuous register cipher hashed crc hashkeycipher"
     },
     {
       "link": "/projects/hCRCRework",
@@ -45,7 +45,7 @@ export const showcases = [
         <a href="/projects/hashKeyCipher">Hashed CRC</a>,
         `, updated with an improved hashing algorithm.`
       ],
-      "keywords": "continuous register cipher"
+      "keywords": "continuous register cipher hcrcrework hashed crc: reworked"
     },
     {
       "link": "/projects/K0090C4",
@@ -54,7 +54,7 @@ export const showcases = [
         <a href="/projects/0090C4">0090C4</a>,
         `'s key-integrated alternative.`
       ],
-      "keywords": "0090c4 cipher"
+      "keywords": "0090c4 cipher k0090c4 weez'd 2"
     },
     {
       "link": "/projects/keyedCRC",
@@ -64,25 +64,25 @@ export const showcases = [
         <a href="/projects/continuousRegisterCipher">Continuous Register Cipher</a>,
         `.`
       ],
-      "keywords": "continuous register cipher"
+      "keywords": "continuous register cipher keyedcrc keyed crc"
     },
     {
       "link": "/projects/keysmashCipher",
       "name": "Keysmash Cipher",
       "desc": "The original cipher, that got us here.",
-      "keywords": "bipher"
+      "keywords": "bipher keysmashcipher keysmash cipher"
     },
     {
       "link": "/projects/poetry",
       "name": "Poems",
       "desc": "A collection of poems written by me, your loyal site administrator.",
-      "keywords": "ignorance, someone else's panopticon"
+      "keywords": "ignorance someone else's panopticon poems poetry"
     },
     {
       "link": "/projects/serverstalker",
       "name": "Minecraft Server Pinger",
       "desc": "A quick tool to check who is online on a specified Minecraft: Java Edition server, and a few more things.",
-      "keywords": ""
+      "keywords": "minecraft server pinger serverstalker"
     }
   ];
 

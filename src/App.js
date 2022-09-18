@@ -42,7 +42,7 @@ class Showcases extends React.Component {
     query = query.toLowerCase();
     let searchedShowcases = [];
     for (let showcase of showcases) {
-      if (showcase.link.toLowerCase().includes(query) || showcase.name.toLowerCase().includes(query) || showcase.keywords.includes(query)) {
+      if (showcase.keywords.includes(query)) {
         searchedShowcases.push(<Showcase showcase={showcase} key={showcase.link}/>);
       }
     }
@@ -53,11 +53,9 @@ class Showcase extends React.Component {
   render() {
     return (
       <span className="showcase-widget">
-        <span className="showcase-flex">
-          <span className="showcase-header">{this.props.showcase.name}</span>
-          <span className="showcase-desc">{this.props.showcase.desc}</span>
-          <button className="showcase-button" onClick={() => window.location.href = this.props.showcase.link}>Go!</button>
-        </span>
+        <span className="showcase-header">{this.props.showcase.name}</span>
+        <span className="showcase-desc">{this.props.showcase.desc}</span>
+        <button className="showcase-button" onClick={() => window.location.href = this.props.showcase.link}>Go!</button>
       </span>
     )
   }
